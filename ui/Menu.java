@@ -24,6 +24,11 @@ public class Menu {
         System.out.flush();
     }
 
+    public static void AguardarInput() {
+        System.out.println("Pressione enter para voltar ao menu...");
+        sc.nextLine();
+    }
+
     public static int capturarInteiro() {
         try {
 
@@ -58,8 +63,7 @@ public class Menu {
             try {
 
                 System.out.println(msg + " (-1 para voltar)");
-                int v = capturarInteiro();
-                return v; 
+                return capturarInteiro();
 
             } catch (IllegalArgumentException e) {
 
@@ -72,7 +76,7 @@ public class Menu {
 
     public static void executarMenu(ArrayList<Tarefas> lista) {
 
-        int opc = -1;
+        int opc;
 
         while(true) {
 
@@ -92,12 +96,14 @@ public class Menu {
                     System.out.println("Digite a descrição da tarefa:");
                     String entrada = capturarTexto();
                     TarefaService.AdicionarTarefa(lista, entrada);
+                    AguardarInput();
                     break; 
                 }
 
                 case 2: {
                     limparTela();
                     TarefaService.MostrarTarefa(lista);
+                    AguardarInput();
                     break; 
                 }
 
@@ -107,6 +113,7 @@ public class Menu {
                     int idx = pedirIndice("Digite o número da tarefa a concluir");
                     if (idx == -1) break;
                     TarefaService.ConcluirTarefa(lista, idx);
+                    AguardarInput();
                     break;
                 }
 
@@ -116,6 +123,7 @@ public class Menu {
                     int idx = pedirIndice("Digite o número da tarefa a ser removida.");
                     if (idx == -1) break;
                     TarefaService.RemoverTarefa(lista, idx);
+                    AguardarInput();
                     break; 
                 }
 
