@@ -1,0 +1,10 @@
+*.class
+*.log
+
+# IDE/editor
+.idea/
+.vscode/
+
+# OS files
+Thumbs.db
+Desktop.ini
