@@ -10,7 +10,7 @@ public class Menu {
     private static final Scanner sc = new Scanner(System.in);
     
     public static void mostrarMenu() {
-        System.out.println("GERENCIADOR DE TAREFAS V1\n");
+        System.out.println("GERENCIADOR DE TAREFAS V2\n");
         System.out.println("Digite o que deseja:\n");
         System.out.println("1| Adicionar tarefa.");
         System.out.println("2| Ver tarefas.");
