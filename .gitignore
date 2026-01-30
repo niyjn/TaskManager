@@ -1,10 +1,27 @@
-*.class
-*.log
+# Database configuration (sensitive data)
+database.properties
 
-# IDE/editor
+# Maven
+target/
+*.jar
+*.war
+
+# IDE
 .idea/
 .vscode/
+*.iml
+*.class
 
-# OS files
+# OS
+.DS_Store
 Thumbs.db
-Desktop.ini
+
+# Logs
+*.log
+
+# Compiled class files
+*.class
+
+# Package Files
+*.zip
+*.tar.gz

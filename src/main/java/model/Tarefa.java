@@ -5,6 +5,7 @@ public class Tarefa {
     public static class Tarefas {
         private String nome;
         private boolean concluiu = false;
+        private int id;
         
         public Tarefas(String nome) {
             this.nome = nome;
@@ -30,6 +31,14 @@ public class Tarefa {
 
         public boolean isConcluiu() {
             return concluiu;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
         }
     } 
 }

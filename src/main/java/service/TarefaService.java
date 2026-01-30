@@ -1,19 +1,21 @@
 package service;
 
 import java.util.ArrayList;
+import java.sql.SQLException;
 import model.Tarefa.Tarefas;
+import DAO.JavaBridge;
 
 public class TarefaService {
 
     private static void garantirListaNaoVazia(ArrayList<Tarefas> lista) {
         if (lista == null || lista.isEmpty()) {
-            throw new IllegalArgumentException("A lista está vazia.");
+            throw new IllegalArgumentException("A lista esta vazia.");
         }
     }
 
     private static void validarIndice(ArrayList<Tarefas> lista, int idx) {
         if (idx < 0 || idx >= lista.size()) {
-            throw new IllegalArgumentException("Essa chave não existe, tente novamente.");
+            throw new IllegalArgumentException("Essa chave nao existe, tente novamente.");
         }
     }
 
@@ -48,7 +50,7 @@ public class TarefaService {
 
     public static boolean listaVazia(ArrayList<Tarefas> lista) {
         if(lista.isEmpty()) {
-            System.out.println("A lista está vazia.");
+            System.out.println("A lista esta vazia.");
             return true;
         }
         return false;
@@ -64,7 +66,4 @@ public class TarefaService {
         } 	
         return false;
     }
-
-
-
 }
